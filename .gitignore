@@ -1,0 +1,17 @@
+# regla para ignorar cualquier archivo que contenga "contactos"
+contactos*.json
+
+# 🔐 Datos sensibles
+*.json
+
+# 💾 Backups locales
+backup/
+backups/
+
+# 🧪 Archivos temporales
+*.log
+*.tmp
+
+# 🖥️ Sistema
+.DS_Store
+Thumbs.db

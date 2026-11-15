@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control Mensajes SantaCruz</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>📒 Control Mensajes </h1>
+    <div class="header-botones">
+      <button id="btn-abrir-modal" class="btn-primario">➕ Añadir contacto</button>
+      <input type="text" id="buscador" placeholder="🔍 Buscar por nombre/email">
+      <button id="btn-exportar" class="btn-primario">💾 Guardar en disco</button>
+      <button id="btn-importar" class="btn-primario">📂 Importar JSON</button>
+      <input type="file" id="input-importar" accept=".json" style="display:none">
+
+    </div>
+  </header>
+
+  <section class="tabla-contenedor">
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Email</th>
+          <th>Teléfono</th>
+          <th>Canal</th>
+          <th>Fecha envío</th>
+          <th>Respuesta</th>
+          <th>Notas</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tabla-body">
+        <!-- Contactos insertados por app.js -->
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Modal añadir/editar contacto -->
+  <div id="modal" class="modal oculto">
+    <div class="modal-contenido">
+      <h2 id="modal-titulo">Añadir nuevo contacto</h2>
+
+      <label>Nombre</label>
+      <input type="text" id="form-nombre">
+
+      <label>Email</label>
+      <input type="email" id="form-email">
+
+      <label>Teléfono (opcional)</label>
+      <input type="text" id="form-telefono">
+
+      <label>Canal</label>
+      <select id="form-canal">
+        <option value="Correo">Correo</option>
+        <option value="WhatsApp">WhatsApp</option>
+        <option value="Red social">Red social</option>
+        <option value="Teléfono">Teléfono</option>
+        <option value="Presencial">Presencial</option> <!-- 👈 Nueva -->
+        <option value="Otro">Otro</option> <!-- 👈 Nueva (opcional, pero útil) -->
+      </select>
+
+      <label>Fecha de envío</label>
+      <input type="date" id="form-fecha">
+
+      <label>Respuesta</label>
+      <select id="form-respuesta">
+        <option value="Pendiente">Pendiente</option>
+        <option value="Respondió">Respondió</option>
+        <option value="Rechazó">Rechazó</option>
+        <option value="No enviado">No enviado</option>
+      </select>
+
+      <label>Notas</label>
+      <textarea id="form-notas"></textarea>
+
+      <div class="modal-botones">
+        <button id="btn-guardar" class="btn-guardar">Guardar</button>
+        <button id="btn-cerrar" class="btn-cerrar">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

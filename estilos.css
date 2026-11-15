@@ -1,0 +1,180 @@
+/* Fondo general verde suave */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #e3f2fd; /* verde pastel */
+  color: #2c3e50;
+}
+
+/* Encabezado */
+header {
+  padding: 20px;
+  background: #90caf9; /* verde medio suave */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #64b5f6;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  margin: 0;
+}
+
+.header-botones {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#buscador {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+}
+
+/* Botón principal */
+.btn-primario {
+  background: #1f6479;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.btn-primario:hover {
+  background: #1565c0;
+}
+
+/* Tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th {
+  background: #bbdefb;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Semáforo más vivos */
+.respuesta-pendiente {
+  background: #ffeb3b; /* amarillo vivo */
+  color: #000;
+}
+.respuesta-respondio {
+  background: #4caf50; /* verde intenso */
+  color: #fff;
+}
+.respuesta-rechazo {
+  background: #f44336; /* rojo intenso */
+  color: #fff;
+}
+.respuesta-noenviado {
+  background: #9e9e9e; /* gris fuerte */
+  color: #fff;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.oculto {
+  display: none;
+}
+
+.modal-contenido {
+  background: white;
+  padding: 25px;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.modal-contenido input,
+.modal-contenido select,
+.modal-contenido textarea {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+}
+
+.modal-botones {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-guardar {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-cerrar {
+  background: #e53935;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Botones editar/borrar */
+.btn-editar {
+  background: #1976d2;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+.btn-borrar {
+  background: #d32f2f;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* para la flecha */
+th {
+  cursor: pointer;
+  position: relative;
+}
+
+th.asc::after {
+  content: " ▲";
+  font-size: 0.8em;
+}
+
+th.desc::after {
+  content: " ▼";
+  font-size: 0.8em;
+}
